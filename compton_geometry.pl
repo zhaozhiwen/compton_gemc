@@ -13,15 +13,14 @@ sub compton
 {
 hinda();
 target();
-# scint();
 }
 
 sub hinda
 {
  my $NUM  = 8;
  
- my @angle=(40,75,105,135,-40,-75,-105,-135);
- my @rot=(-40,-75,-105,-135,40,75,105,135); 
+ my @angle=(40,75,110,145,-55,-90,-125,-159);
+ my @rot=(-40,-75,-110,-145,55,90,125,159); 
  
  my $R_hindacore=10.375*2.54/2;
  my $Dz_hindacore=10.875*2.54/2;
@@ -38,6 +37,7 @@ sub hinda
  
  my $dis_leadshield=57.996+$Dz_leadshield;
  my $dis_hindashield=57.996+$Dz_leadshield*2+$Dz_hindashield;
+ my $dis_scint=50; 
  
  my $height=0.0525*2.54;
 
@@ -91,6 +91,30 @@ sub hinda
     $id=$n*10+2;
     $detector{"identifiers"} = "id manual $n";
      print_det(\%configuration, \%detector);   
+     
+    $x    = $dis_scint*sin($angle[$n-1]/180*3.1416);
+    $z    = $dis_scint*cos($angle[$n-1]/180*3.1416);   
+     
+    $detector{"name"}        = "$DetectorName\_scint\_$n";
+    $detector{"mother"}      = "$DetectorMother" ;
+    $detector{"description"} = $detector{"name"};
+    $detector{"pos"}        = "$x*cm $height*cm $z*cm";
+    $detector{"rotation"}   = "0*deg $rot[$n-1]*deg 0*deg";
+    $detector{"color"}      = "9955CC";
+    $detector{"type"}       = "Box";
+    $detector{"dimensions"} = "3*inch 3*inch 0.09375*inch";
+    $detector{"material"}   = "G4_POLYETHYLENE";
+    $detector{"mfield"}     = "no";
+    $detector{"ncopy"}      = 1;
+    $detector{"pMany"}       = 1;
+    $detector{"exist"}       = 1;
+    $detector{"visible"}     = 1;
+    $detector{"style"}       = 1;
+    $detector{"sensitivity"} = "flux";
+    $detector{"hit_type"}    = "flux";
+    $id=$n*10+0;
+    $detector{"identifiers"} = "id manual $n";
+    if($n==1 || $n==2 || $n==5 || $n==6) {print_det(\%configuration, \%detector);        }
      
 
     $x    = $dis_leadshield*sin($angle[$n-1]/180*3.1416);
