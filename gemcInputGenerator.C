@@ -33,7 +33,7 @@ void gemcInputGenerator(){
   const nEvent = 100;
   ofstream outfile("GemcInput.dat");
 
-  TFile *infile = new TFile("/home/xl79/mepg/git_Compton/brem_spectrum.root");
+  TFile *infile = new TFile("brem_spectrum.root");
   TH1F *hist = (TH1F*)infile->Get("brem_spectrum");
   Double_t bincount;
   Double_t E_min = 100.;
@@ -41,7 +41,7 @@ void gemcInputGenerator(){
   Double_t val, prob, E;
   Bool_t found;
   TRandom2 rand;
-
+  rand.SetSeed(0);
 
   for(int i=0; i<nEvent; i++){
     outfile << "1\t0.\t0.\t0\t0\t0\t0.\t0.\t0.\t0."<< endl;
@@ -61,7 +61,7 @@ void gemcInputGenerator(){
       }
     }
 
-    outfile << E << "\t" << E << "\t0.\t0.\t0.\t100.0"<<endl;
+    outfile << E << "\t" << E << "\t0.\t0.\t0.\t-100.0"<<endl;
   }
 
   outfile.close();
