@@ -68,7 +68,7 @@ sub hinda
     $detector{"sensitivity"} = "flux";
     $detector{"hit_type"}    = "flux";
     $id=$n*10+1;
-    $detector{"identifiers"} = "id manual $n";
+    $detector{"identifiers"} = "id manual $id";
      print_det(\%configuration, \%detector);         
      
     $detector{"name"}        = "$DetectorName\_hindashield\_$n";
@@ -89,7 +89,7 @@ sub hinda
     $detector{"sensitivity"} = "flux";
     $detector{"hit_type"}    = "flux";
     $id=$n*10+2;
-    $detector{"identifiers"} = "id manual $n";
+    $detector{"identifiers"} = "id manual $id";
      print_det(\%configuration, \%detector);   
      
     $x    = $dis_scint*sin($angle[$n-1]/180*3.1416);
@@ -113,7 +113,7 @@ sub hinda
     $detector{"sensitivity"} = "flux";
     $detector{"hit_type"}    = "flux";
     $id=$n*10+0;
-    $detector{"identifiers"} = "id manual $n";
+    $detector{"identifiers"} = "id manual $id";
     if($n==1 || $n==2 || $n==5 || $n==6) {print_det(\%configuration, \%detector);        }
      
 
