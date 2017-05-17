@@ -173,7 +173,7 @@ sub target
     $detector{"rotation"}   = "0*deg 0*deg 0*deg";
     $detector{"color"}      = "2200cc";
     $detector{"type"}       = "Cons";
-    $detector{"dimensions"} = "0*cm 0.792*inch 0*cm 1.068*inch 10*cm 0*deg 360*deg";
+    $detector{"dimensions"} = "0*inch 1.068*inch 0*inch 0.792*inch 10*cm 0*deg 360*deg";
     $detector{"material"}   = "LD2";
     $detector{"mfield"}     = "no";
     $detector{"ncopy"}      = 1;
