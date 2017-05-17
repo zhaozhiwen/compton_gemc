@@ -28,9 +28,9 @@
 using namespace std;
 
 
-void gemcInputGenerator(){
+void gemcInputGenerator(int nEvent){
 
-  const nEvent = 100;
+//  const nEvent = 100;
   ofstream outfile("GemcInput.dat");
 
   TFile *infile = new TFile("brem_spectrum.root");
