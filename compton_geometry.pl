@@ -170,7 +170,7 @@ sub target
     $detector{"mother"}      = "$DetectorMother" ;
     $detector{"description"} = $detector{"name"};
     $detector{"pos"}        = "0*cm 0*cm 0.024*inch";
-    $detector{"rotation"}   = "0*deg 0*deg 0*deg";
+    $detector{"rotation"}   = "0.728*deg 0*deg 0*deg";
     $detector{"color"}      = "2200cc";
     $detector{"type"}       = "Cons";
     $detector{"dimensions"} = "0*inch 1.068*inch 0*inch 0.792*inch 10*cm 0*deg 360*deg";
