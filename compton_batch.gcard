@@ -1,0 +1,69 @@
+<gcard>
+
+<detector name="/work/halla/solid/sim/solid_gemc/compton_gemc/compton" factory="TEXT" variation="Original"/>
+
+<option name="INTEGRATEDRAW" value="flux"/>
+
+<option name="RECORD_PASSBY" value="1"/>
+<option name="SAVE_ALL_MOTHERS" value="1"/>
+
+<option name="PHYSICS" value="QGSP_BERT_HP+STD"/>
+
+<option name="HALL_MATERIAL" value="G4_AIR"/>
+
+<option name="MAX_X_POS" value="10000"/>
+<option name="MAX_Y_POS" value="10000"/>
+<option name="MAX_Z_POS" value="10000"/>
+<option name="HALL_DIMENSIONS" value="10*m,10*m,10*m"/>
+
+<option name="OUTPUT" value="evio,out.evio"/>
+<option name="USE_GUI"  value="0"/>
+
+</gcard>
+
+<!--  comment out
+<detector name="../geometry/det1_rich_simple_ionside/det1_rich_simple_ionside" factory="TEXT" variation="Original"/>
+
+<option name="PHYSICS" value="QGSP_BERT+STD+Optical"/>
+
+<option name="geometry" value="800x800"/>
+<option name="HIGH_RES" value="1"/>
+<option name="USE_GUI"  value="1"/>
+
+<option name="EXEC_MACRO" value="meic_slice_solenoid.vis"/>
+
+<option name="HALL_FIELD" value="det1_solenoid_hybrid_v1"/>
+
+<option name="CHECK_OVERLAPS"  value="1"/>
+<option name="USE_GUI"  value="0"/>
+
+<option name="HALL_FIELD" value="det_sol_field_cylinder"/>
+
+<option name="HIT_PROCESS_LIST" value="solid"/>
+
+<option name="FIELD_VERBOSITY"  value="100"/>
+<option name="GEO_VERBOSITY"  value="100"/>
+
+use this to check overlap
+<option name="CHECK_OVERLAPS"  value="1"/>
+<option name="USE_GUI"  value="0"/>
+
+use this to run batch mode for txt or evio output
+<option name="N" value="1"/>
+<option name="OUTPUT" value="txt,output.txt"/>
+<option name="OUTPUT" value="evio,output.evio"/>
+<option name="USE_GUI"  value="0"/>
+
+use this for interactive mode
+<option name="geometry" value="1000x1000"/>
+<option name="HIGH_RES" value="1"/>
+<option name="USE_GUI"  value="1"/>
+
+use this to cut 
+<option name="EXEC_MACRO" value="meic_slice_tilt.vis"/>
+<option name="EXEC_MACRO" value="meic_slice_solenoid.vis"/>
+
+
+use "gemc -help" to see all options
+
+-->
