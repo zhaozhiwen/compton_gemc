@@ -56,7 +56,7 @@ void gemcInputGenerator(int nEvent){
       bincount = hist->GetBinContent(hist->FindBin(val));
 
       if(prob <= bincount){
-	E = val;
+	E = val*0.001;
 	found = true;
       }
     }
