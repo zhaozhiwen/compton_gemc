@@ -36,8 +36,8 @@ void gemcInputGenerator(int nEvent){
   TFile *infile = new TFile("brem_spectrum.root");
   TH1F *hist = (TH1F*)infile->Get("brem_spectrum");
   Double_t bincount;
-  Double_t E_min = 100.;
-  Double_t max = hist->GetBinContent(hist->FindBin(E_min));
+  Double_t E_min = 0.1;
+  Double_t max = hist->GetBinContent(hist->FindBin(E_min*1000));
   Double_t val, prob, E;
   Bool_t found;
   TRandom2 rand;
@@ -49,14 +49,14 @@ void gemcInputGenerator(int nEvent){
 
     found = false;
     while(!found){
-      val = E_min + rand.Rndm()*(1000.0-E_min);
+      val = E_min + rand.Rndm()*(1.0-E_min);
       prob = rand.Rndm()*max;
       // val = Rx.Rndm()*7e7;
       // prob = Ry.Rndm()*max;
-      bincount = hist->GetBinContent(hist->FindBin(val));
+      bincount = hist->GetBinContent(hist->FindBin(val*1000));
 
       if(prob <= bincount){
-	E = val*0.001;
+	E = val;
 	found = true;
       }
     }
