@@ -57,6 +57,7 @@ void gemcInputGenerator(int nEvent){
 
       if(prob <= bincount){
 	E = 2*val;
+//	E = 2*val;	      
 	found = true;
       }
     }
