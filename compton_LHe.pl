@@ -57,3 +57,7 @@ $configuration{"variation"} = "Original";
 require "compton_LHe_geometry.pl";
 compton_LHe();
 
+require "compton_LHe_materials.pl";
+define_material();
+
+
