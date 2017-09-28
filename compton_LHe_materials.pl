@@ -65,7 +65,7 @@ sub define_material
 	%mat = init_mat();
 	$mat{"name"}          = "He4_liquid";
 	$mat{"description"}   = "He4_liquid";
-	$mat{"density"}       = "0.125";  #in g/cm3
+	$mat{"density"}       = "0.137";  #in g/cm3
 	$mat{"ncomponents"}   = "1";
 	$mat{"components"}    = "G4_He 1";
 	print_mat(\%configuration, \%mat);	
