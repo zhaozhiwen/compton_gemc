@@ -28,7 +28,7 @@
 using namespace std;
 
 
-void gemcInputGenerator(int nEvent){
+void gemcInputGenerator_LHe_cryo(int nEvent){
 
 //  const nEvent = 100;
   ofstream outfile("GemcInput.dat");
