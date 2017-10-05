@@ -223,8 +223,8 @@ sub cryostat
      $detector{"exist"}       = 1;
      $detector{"visible"}     = 1;
      $detector{"style"}       = 1;
-     $detector{"sensitivity"} = "flux";
-     $detector{"hit_type"}    = "flux";
+     $detector{"sensitivity"} = "no";
+     $detector{"hit_type"}    = "no";
      $detector{"identifiers"} = "no";
       print_det(\%configuration, \%detector);   
 
@@ -243,8 +243,8 @@ sub cryostat
      $detector{"exist"}       = 1;
      $detector{"visible"}     = 1;
      $detector{"style"}       = 1;
-     $detector{"sensitivity"} = "flux";
-     $detector{"hit_type"}    = "flux";
+     $detector{"sensitivity"} = "no";
+     $detector{"hit_type"}    = "no";
      $detector{"identifiers"} = "no";
       print_det(\%configuration, \%detector);   
  }
