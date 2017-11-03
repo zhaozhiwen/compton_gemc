@@ -205,6 +205,7 @@ sub cryostat
  my @dis_cryoWall = (3, 4, 6);
  my @Dz_cryoPlate = (0.02, 0.02, 0.25);
  my @dis_cryoPlate = (-3.02, -7.02, -8.25);
+ my @dis_KaptonWindow = (6.98, 7.98, 8.98);
 
  for(my $l=1; $l<=$N_cryo; $l++)
  {   
@@ -248,6 +249,47 @@ sub cryostat
      $detector{"hit_type"}    = "no";
      $detector{"identifiers"} = "no";
       print_det(\%configuration, \%detector);   
+
+     $detector{"name"}        = "$DetectorName\_cryoFrontWindow\_$l";
+     $detector{"mother"}      = "$DetectorMother" ;
+     $detector{"description"} = $detector{"name"};
+     $detector{"pos"}        = "0*inch 0*inch $dis_KaptonWindow[$l-1]*inch";
+     $detector{"rotation"}   = "0*deg 0*deg 0*deg";
+     $detector{"color"}      = "990000";
+     $detector{"type"}       = "Tube";
+     $detector{"dimensions"} = "0*inch 1.0*inch 0.02*inch 0*deg 360*deg";
+     $detector{"material"}   = "G4_KAPTON";
+     $detector{"mfield"}     = "no";
+     $detector{"ncopy"}      = 1;
+     $detector{"pMany"}       = 1;
+     $detector{"exist"}       = 1;
+     $detector{"visible"}     = 1;
+     $detector{"style"}       = 1;
+     $detector{"sensitivity"} = "no";
+     $detector{"hit_type"}    = "no";
+     $detector{"identifiers"} = "no";
+      print_det(\%configuration, \%detector);   
+
+     $detector{"name"}        = "$DetectorName\_cryoBackWindow\_$l";
+     $detector{"mother"}      = "$DetectorMother" ;
+     $detector{"description"} = $detector{"name"};
+     $detector{"pos"}        = "0*inch 0*inch -$dis_KaptonWindow[$l-1]*inch";
+     $detector{"rotation"}   = "0*deg 0*deg 0*deg";
+     $detector{"color"}      = "990000";
+     $detector{"type"}       = "Tube";
+     $detector{"dimensions"} = "0*inch 1.0*inch 0.02*inch 0*deg 360*deg";
+     $detector{"material"}   = "G4_KAPTON";
+     $detector{"mfield"}     = "no";
+     $detector{"ncopy"}      = 1;
+     $detector{"pMany"}       = 1;
+     $detector{"exist"}       = 1;
+     $detector{"visible"}     = 1;
+     $detector{"style"}       = 1;
+     $detector{"sensitivity"} = "no";
+     $detector{"hit_type"}    = "no";
+     $detector{"identifiers"} = "no";
+      print_det(\%configuration, \%detector);   
+
  }
 
 }
@@ -289,7 +331,7 @@ sub Kapton_cell
  $detector{"description"} = $detector{"name"};
  $detector{"pos"}        = "0*cm 0*cm 0*cm";
  $detector{"rotation"}   = "0*deg 0*deg 0*deg";
- $detector{"color"}      = "1100cc";
+ $detector{"color"}      = "990000";
  $detector{"type"}       = "Cons";
  $detector{"dimensions"} = "1.068*inch 1.073*inch 0.792*inch 0.797*inch 10*cm 0*deg 360*deg";
  $detector{"material"}   = "G4_KAPTON";
@@ -304,13 +346,12 @@ sub Kapton_cell
  $detector{"identifiers"} = "no";
  print_det(\%configuration, \%detector);   
 
- my %detector=init_det();
  $detector{"name"}        = "$DetectorName\_KaptonFrontCap";
  $detector{"mother"}      = "$DetectorMother" ;
  $detector{"description"} = $detector{"name"};
- $detector{"pos"}        = "0*cm 0*cm -10.*cm+0.024*inch";
+ $detector{"pos"}        = "0*cm 0*cm -10.00635*cm";
  $detector{"rotation"}   = "0*deg 0*deg 0*deg";
- $detector{"color"}      = "1100cc";
+ $detector{"color"}      = "990000";
  $detector{"type"}       = "Tube";
  $detector{"dimensions"} = "0.*inch 1.068*inch 0.0025*inch 0*deg 360*deg";
  $detector{"material"}   = "G4_KAPTON";
@@ -325,9 +366,24 @@ sub Kapton_cell
  $detector{"identifiers"} = "no";
  print_det(\%configuration, \%detector);   
 
-
-
-
-
+ $detector{"name"}        = "$DetectorName\_KaptonBackCap";
+ $detector{"mother"}      = "$DetectorMother" ;
+ $detector{"description"} = $detector{"name"};
+ $detector{"pos"}        = "0*cm 0*cm 10.00635*cm";
+ $detector{"rotation"}   = "0*deg 0*deg 0*deg";
+ $detector{"color"}      = "990000";
+ $detector{"type"}       = "Tube";
+ $detector{"dimensions"} = "0.*inch 0.792*inch 0.0025*inch 0*deg 360*deg";
+ $detector{"material"}   = "G4_KAPTON";
+ $detector{"mfield"}     = "no";
+ $detector{"ncopy"}      = 1;
+ $detector{"pMany"}       = 1;
+ $detector{"exist"}       = 1;
+ $detector{"visible"}     = 1;
+ $detector{"style"}       = 1;
+ $detector{"sensitivity"} = "no";
+ $detector{"hit_type"}    = "no";
+ $detector{"identifiers"} = "no";
+ print_det(\%configuration, \%detector);   
 
 }
