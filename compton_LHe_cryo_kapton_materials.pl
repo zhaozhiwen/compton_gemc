@@ -60,12 +60,22 @@ sub define_material
 {
 	my %mat;
 
-	#unpol LHe target 
+	#unpol LHe target (full)
 	#4He
 	%mat = init_mat();
 	$mat{"name"}          = "He4_liquid";
 	$mat{"description"}   = "He4_liquid";
 	$mat{"density"}       = "0.137";  #in g/cm3
+	$mat{"ncomponents"}   = "1";
+	$mat{"components"}    = "G4_He 1";
+	print_mat(\%configuration, \%mat);	
+	
+	#unpol LHe target (empty) 
+	#4He
+	%mat = init_mat();
+	$mat{"name"}          = "He4_gas";
+	$mat{"description"}   = "He4_gas";
+	$mat{"density"}       = "0.0025";  #in g/cm3
 	$mat{"ncomponents"}   = "1";
 	$mat{"components"}    = "G4_He 1";
 	print_mat(\%configuration, \%mat);	

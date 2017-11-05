@@ -1,2 +1,4 @@
           He4_liquid  |                    He4_liquid  |     0.137  |         1  |                                           G4_He 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  
+             He4_gas  |                       He4_gas  |    0.0025  |         1  |                                           G4_He 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  
           He4_liquid  |                    He4_liquid  |     0.137  |         1  |                                           G4_He 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  
+             He4_gas  |                       He4_gas  |    0.0025  |         1  |                                           G4_He 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  
