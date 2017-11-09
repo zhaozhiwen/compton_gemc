@@ -1,6 +1,6 @@
 <gcard>
 
-<detector name="/work/halla/solid/sim/solid_gemc/compton_gemc/compton" factory="TEXT" variation="Original"/>
+<detector name="/var/phy/project/mepg/xl79/gemc_git/compton_gemc/compton_LHe_cryo" factory="TEXT" variation="Original"/>
 
 <option name="INTEGRATEDRAW" value="flux"/>
 

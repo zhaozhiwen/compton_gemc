@@ -44,6 +44,8 @@ void gemcInputGenerator_LHe_cryo(int nEvent, double E_min, double E_max){//E_min
   TRandom2 rand;
   rand.SetSeed(0);
 
+  // TH1F *h = new TH1F("h1","h1",100,0,100);
+
   for(int i=0; i<nEvent; i++){
     outfile << "1\t0.\t0.\t0\t0\t0\t0.\t0.\t0.\t0."<< endl;
     outfile << "1\t0.\t1\t22\t0\t0\t0.\t0.\t";
@@ -63,8 +65,10 @@ void gemcInputGenerator_LHe_cryo(int nEvent, double E_min, double E_max){//E_min
     }
 
     outfile << E << "\t" << E << "\t0.\t0.\t0.\t-100.0"<<endl;
+
+    // h->Fill(E*1000);
   }
 
   outfile.close();
-
+  // h.Draw();
 }
