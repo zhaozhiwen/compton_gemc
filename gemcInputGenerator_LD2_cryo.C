@@ -33,7 +33,7 @@ void gemcInputGenerator_LHe_cryo(int nEvent, double E_min, double E_max){//E_min
 //  const nEvent = 100;
   ofstream outfile("GemcInput.dat");
 
-  TFile *infile = new TFile("/var/phy/project/mepg/xl79/brem/prim_brem_spectrum.root");
+  TFile *infile = new TFile("prim_brem_spectrum.root");
   TH1F *hist = (TH1F*)infile->Get("prim_spectrum_523");
   Double_t bincount;
   // double E_min = 0.05; //GeV
