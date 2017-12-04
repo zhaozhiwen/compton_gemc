@@ -28,7 +28,7 @@
 using namespace std;
 
 
-void gemcInputGenerator_LHe_cryo(int nEvent, double E_min, double E_max){//E_min and E_max are in GeV
+void gemcInputGenerator_LD2_cryo(int nEvent, double E_min, double E_max){//E_min and E_max are in GeV
 
 //  const nEvent = 100;
   ofstream outfile("GemcInput.dat");
