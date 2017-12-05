@@ -1,0 +1,4 @@
+           2H_liquid  |                     2H_liquid  |    0.1623  |         1  |                                             LD2 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  
+              2H_gas  |                        2H_gas  |   0.00234  |         1  |                                             LD2 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  
+           2H_liquid  |                     2H_liquid  |    0.1623  |         1  |                                             LD2 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  
+              2H_gas  |                        2H_gas  |   0.00234  |         1  |                                             LD2 1  | none  | none  | none  | none  | none  | none  | none  |   -1  |   -1  |   -1  |   -1  |   -1  | none  

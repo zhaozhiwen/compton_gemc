@@ -153,7 +153,7 @@ sub target
  $detector{"color"}      = "2200cc";
  $detector{"type"}       = "Cons";
  $detector{"dimensions"} = "0*inch 1.068*inch 0*inch 0.792*inch 10*cm 0*deg 360*deg";
- $detector{"material"}   = "LD2";
+ $detector{"material"}   = "2H_gas";
  $detector{"mfield"}     = "no";
  $detector{"ncopy"}      = 1;
  $detector{"pMany"}       = 1;

@@ -57,3 +57,5 @@ $configuration{"variation"} = "Original";
 require "compton_LD2_cryo_kapton_geometry.pl";
 compton_LD2_cryo_kapton();
 
+require "compton_LD2_cryo_kapton_materials.pl";
+define_material();
