@@ -58,10 +58,11 @@ void FileReduce(string input_filename)
 	output_allraws = allraws->CloneTree(0);
 	output_flux = flux->CloneTree(0);
 
-vector<double> *flux_hitn=0;
+vector<double> *flux_hitn=0, *flux_id=0;
 vector<double> *allraws_hitn=0,*solid_gem_hitn=0,*solid_ec_hitn=0,*solid_lgc_hitn=0,*solid_mrpc_hitn=0,*solid_spd_hitn=0,*solid_hgc_hitn=0;
 allraws->SetBranchAddress("hitn", &allraws_hitn);
 flux->SetBranchAddress("hitn", &flux_hitn);
+flux->SetBranchAddress("id",&flux_id);
 
 	long long int fNentries = generated->GetEntries();
 	
@@ -76,7 +77,7 @@ flux->SetBranchAddress("hitn", &flux_hitn);
 			flux->GetEntry(i);	
 
 		
-			  if (flux_hitn->size() > 0){			   
+			  if (flux_hitn->size()>1 || (flux_hitn->size()==1&&flux_id->at(0)<100) ){			   
 
 			      counter++;
 			      
